@@ -1,0 +1,36 @@
+{
+    "dt": 1647010800,
+    "main": {
+        "temp": 23.03,
+        "feels_like": 23.29,
+        "temp_min": 23.03,
+        "temp_max": 24.71,
+        "pressure": 1016,
+        "sea_level": 1016,
+        "grnd_level": 928,
+        "humidity": 73,
+        "temp_kf": -1.68
+    },
+    "weather": [
+        {
+            "id": 802,
+            "main": "Clouds",
+            "description": "scattered clouds",
+            "icon": "03d"
+        }
+    ],
+    "clouds": {
+        "all": 33
+    },
+    "wind": {
+        "speed": 3.26,
+        "deg": 322,
+        "gust": 5.94
+    },
+    "visibility": 10000,
+    "pop": 0.02,
+    "sys": {
+        "pod": "d"
+    },
+    "dt_txt": "2022-03-11 15: 00: 00"
+}
