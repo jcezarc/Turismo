@@ -15,7 +15,7 @@ def grava_viagem(cidade: str, periodo: datetime, conexao: dict, Clima: type):
     @db_session
     def faz_mala():
         mala = []
-        sql_debug(True)
+        # sql_debug(True)
         for chuva, temperatura in clima.dados:
             temp_min, temp_max = temperatura -5.0, temperatura + 5.0
             roupas = select(
@@ -28,7 +28,7 @@ def grava_viagem(cidade: str, periodo: datetime, conexao: dict, Clima: type):
                 if roupa not in mala:
                     mala.append(roupa)
                     rol.add(roupa.nome)
-        sql_debug(False)
+        # sql_debug(False)
         Viagem(
             cidade=cidade,
             periodo=periodo,

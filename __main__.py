@@ -20,7 +20,7 @@ Depois faz a mesma viagem daqui a 15 dias, usando o Histórico
 print('='*20, '\n', 'Consultando API...'.center(30), '\n', '='*20)
 m1 = grava_viagem(
     cidade=DESTINO,
-    periodo=datetime.now() + timedelta(days=1),
+    periodo=datetime.now(),
     conexao=MY_PONY,
     Clima=api.Clima
 )
