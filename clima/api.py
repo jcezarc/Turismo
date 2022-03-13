@@ -21,10 +21,7 @@ class Clima:
             chuva = resp["weather"][0]["main"] == "Rain"
             temperatura = resp["main"]["temp"]
             self.dados.append((chuva, temperatura))
-        print('-*/--*/-*/*-//-/-*/*/*/-*-*')
-        print(self.dados)
-        print('-*/--*/-*/*-//-/-*/*/*/-*-*')
-        print('-*/--*/-*/*-//-/-*/*/*/-*-*')
+
     
     def url_weather(self, **args):
         return 'https://api.openweathermap.org/data/2.5/forecast?{}'.format(
