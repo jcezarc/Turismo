@@ -15,7 +15,6 @@ from pony.orm import (
 DB_PATH = 'c:/users/julio/turismo/db/'
 
 
-# @db_session
 def db_factory(**args):
     db = Database()
     db.bind(**args)
@@ -39,7 +38,7 @@ def dados_iniciais(Roupa):
         with open(f'{DB_PATH}roupas.csv', 'r', encoding='utf-8') as f:
             csv_reader = reader(f, delimiter=',')
             header = next(csv_reader)
-            schema = [str, float, lambda x: bool(int(x))]
+            schema = [str, float, lambda x: x == '1']
             for row in csv_reader:
                 values = {k: t(v) for k, t, v in zip(header, schema, row)}
                 Roupa(**values)  # ROUPA NOVA ("Minha pequena Eva..." :)
