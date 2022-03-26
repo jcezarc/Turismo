@@ -4,7 +4,7 @@ from db.models import db_factory, dados_iniciais
 
 
 def grava_viagem(cidade: str, periodo: datetime, conexao: dict, Clima: type):
-    rol = set()
+    nomes_das_roupas = set()
     db, Roupa, Viagem = db_factory(**conexao)
     dados_iniciais(Roupa)
     clima = Clima(
@@ -27,7 +27,7 @@ def grava_viagem(cidade: str, periodo: datetime, conexao: dict, Clima: type):
             for roupa in roupas:
                 if roupa not in mala:
                     mala.append(roupa)
-                    rol.add(roupa.nome)
+                    nomes_das_roupas.add(roupa.nome)
         # sql_debug(False)
         Viagem(
             cidade=cidade,
@@ -36,4 +36,4 @@ def grava_viagem(cidade: str, periodo: datetime, conexao: dict, Clima: type):
         )
         commit()
     faz_mala()
-    return rol
+    return nomes_das_roupas
